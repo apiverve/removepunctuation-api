@@ -1,0 +1,79 @@
+openapi: 3.0.4
+info:
+  title: Remove Punctuation
+  description: Remove Punctuation is a simple tool for removing punctuation marks from text. It strips all common punctuation characters and provides statistics about what was removed.
+  termsOfService: https://apiverve.com/terms/
+  contact:
+    name: APIVerve Support
+    email: hello@apiverve.com
+    url: https://apiverve.com/contact
+  version: 1.0.9
+externalDocs:
+  description: Learn more about APIVerve
+  url: https://docs.apiverve.com?utm_source=openapi
+servers:
+- url: https://api.apiverve.com/
+paths:
+  /v1/removepunctuation:
+    post:
+      summary: Remove Punctuation
+      description: Remove Punctuation is a simple tool for removing punctuation marks from text. It strips all common punctuation characters and provides statistics about what was removed.
+      operationId: removepunctuation
+      parameters: []
+      responses:
+        '200':
+          description: Successful Response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  status:
+                    type: string
+                    description: status
+                  error:
+                    type: string
+                    description: error
+                  data:
+                    type: string
+                    description: data
+              example:
+                status: ok
+                error: 
+                data:
+                  original: Hello, World! How are you?
+                  cleaned: Hello World How are you
+                  removed:
+                  - ','
+                  - '!'
+                  - '?'
+                  removed_count: 3
+        '401':
+          description: Your request was not authorized, or your API Key was invalid
+        '404':
+          description: Requested resource was not found
+        '500':
+          description: A server error has occured, try again later
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                text:
+                  type: string
+                  description: The text to remove punctuation from
+                  example: "Hello, world! How are you doing today? I'm great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens & more!"
+              required:
+              - text
+              example:
+                text: "Hello, world! How are you doing today? I'm great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens & more!"
+components:
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: x-api-key
+      in: header
+security:
+- api_key: []
