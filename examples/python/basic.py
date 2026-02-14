@@ -14,20 +14,14 @@ API_URL = 'https://api.apiverve.com/v1/removepunctuation'
 
 def call_removepunctuation_api():
     """
-    Make a POST request to the Remove Punctuation API
+    Make a GET request to the Remove Punctuation API
     """
     try:
-        # Request body
-        request_body &#x3D; {
-    &#x27;text&#x27;: &#x27;Hello, world! How are you doing today? I&#x27;m great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens &amp; more!&#x27;
-}
-
         headers = {
-            'x-api-key': API_KEY,
-            'Content-Type': 'application/json'
+            'x-api-key': API_KEY
         }
 
-        response = requests.post(API_URL, headers=headers, json=request_body)
+        response = requests.get(API_URL, headers=headers)
 
         # Raise exception for HTTP errors
         response.raise_for_status()
