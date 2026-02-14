@@ -20,7 +20,7 @@ namespace APIVerve.Examples
         private static readonly string API_URL = "https://api.apiverve.com/v1/removepunctuation";
 
         /// <summary>
-        /// Make a POST request to the Remove Punctuation API
+        /// Make a GET request to the Remove Punctuation API
         /// </summary>
         static async Task<JsonDocument> CallRemovePunctuationAPI()
         {
@@ -29,13 +29,7 @@ namespace APIVerve.Examples
                 using var client = new HttpClient();
                 client.DefaultRequestHeaders.Add("x-api-key", API_KEY);
 
-                // Request body
-                var requestBody &#x3D; new { text &#x3D; &quot;Hello, world! How are you doing today? I&#x27;m great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens &amp; more!&quot; };
-
-                var jsonContent = JsonSerializer.Serialize(requestBody);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-
-                var response = await client.PostAsync(API_URL, content);
+                var response = await client.GetAsync(API_URL);
 
                 // Check if response is successful
                 response.EnsureSuccessStatusCode();
