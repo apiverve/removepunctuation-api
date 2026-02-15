@@ -12,7 +12,6 @@ namespace APIVerve.API.RemovePunctuation
     {
         /// <summary>
         /// The text to remove punctuation from
-        /// Example: Hello, World! How are you?
         /// </summary>
         [JsonProperty("text")]
         public string Text { get; set; }
