@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/removepunctuation",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Remove Punctuation is a simple tool for removing punctuation marks from text. It strips all common punctuation characters and provides statistics about what was removed.",
   "main": "index.js",
   "types": "index.d.ts",
