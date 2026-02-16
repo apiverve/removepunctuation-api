@@ -26,7 +26,7 @@ Add the dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.apiverve:removepunctuation-api:1.1.13'
+    implementation 'com.github.apiverve:removepunctuation-api:1.1.14'
 }
 ```
 
@@ -47,7 +47,7 @@ RemovePunctuationAPIClient client = new RemovePunctuationAPIClient("YOUR_API_KEY
 try {
     // Prepare request parameters
     Map<String, Object> parameters = new HashMap<>();
-    parameters.put("text", "Hello, World! How are you?");
+    parameters.put("text", "Hello, world! How are you doing today? I'm great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens & more!");
 
     // Execute the request
     APIResponse response = client.execute(parameters);
