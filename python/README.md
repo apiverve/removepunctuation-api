@@ -223,8 +223,9 @@ from apiverve_removepunctuation.apiClient import RemovepunctuationAPIClient
 
 api = RemovepunctuationAPIClient("[YOUR_API_KEY]")
 
+query = { "text": "Hello, world! How are you doing today? I'm great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens & more!" }
+
 try:
-    query = { "text": "Hello, world! How are you doing today? I'm great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens & more!" }
     result = api.execute(query)
     print(result)
 finally:
