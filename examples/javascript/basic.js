@@ -9,15 +9,22 @@ const API_KEY = process.env.APIVERVE_API_KEY || 'YOUR_API_KEY_HERE';
 const API_URL = 'https://api.apiverve.com/v1/removepunctuation';
 
 /**
- * Make a GET request to the Remove Punctuation API
+ * Make a POST request to the Remove Punctuation API
  */
 async function callRemovePunctuationAPI() {
   try {
+    // Request body
+    const requestBody &#x3D; {
+    &quot;text&quot;: &quot;Hello, world! How are you doing today? I&#x27;m great - thanks for asking. This text has lots of punctuation: periods, commas, hyphens &amp; more!&quot;
+};
+
     const response = await fetch(API_URL, {
-      method: 'GET',
+      method: 'POST',
       headers: {
-        'x-api-key': API_KEY
-      }
+        'x-api-key': API_KEY,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(requestBody)
     });
 
     // Check if response is successful
