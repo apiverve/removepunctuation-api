@@ -122,14 +122,18 @@ async function makeRequest() {
   "status": "ok",
   "error": null,
   "data": {
-    "original": "Hello, World! How are you?",
-    "cleaned": "Hello World How are you",
-    "removed": [
-      ",",
+    "cleaned": "Hello world How are you doing today Im great thanks for asking This text has lots of punctuation periods commas hyphens more",
+    "punctuation_removed": [
       "!",
+      "&",
+      "'",
+      ",",
+      "-",
+      ".",
+      ":",
       "?"
     ],
-    "removed_count": 3
+    "count": 11
   }
 }
 ```
