@@ -25,20 +25,32 @@ namespace APIVerve.API.RemovePunctuation
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
     {
-        [JsonProperty("original")]
-        public string Original { get; set; }
-
         [JsonProperty("cleaned")]
         public string Cleaned { get; set; }
 
-        [JsonProperty("removed")]
-        public string[] Removed { get; set; }
+        [JsonProperty("punctuation_removed")]
+        public string[] PunctuationRemoved { get; set; }
 
-        [JsonProperty("removed_count")]
-        public long RemovedCount { get; set; }
+        [JsonProperty("count")]
+        public long? Count { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
