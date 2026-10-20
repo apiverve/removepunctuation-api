@@ -2,9 +2,9 @@ openapi: 3.0.4
 info:
   title: Remove Punctuation
   description: >-
-    Remove Punctuation is a simple tool for removing punctuation marks from
-    text. It strips all common punctuation characters and provides statistics
-    about what was removed.
+    Remove Punctuation strips punctuation marks from any submitted text string
+    and returns the cleaned text. Paid plans add the total count and a list of
+    every punctuation character removed.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
