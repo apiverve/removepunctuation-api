@@ -1,7 +1,7 @@
 {
   "name": "@apiverve/removepunctuation",
-  "version": "1.2.0",
-  "description": "Remove Punctuation is a simple tool for removing punctuation marks from text. It strips all common punctuation characters and provides statistics about what was removed.",
+  "version": "1.2.2",
+  "description": "Remove Punctuation strips punctuation marks from any submitted text string and returns the cleaned text. Paid plans add the total count and a list of every punctuation character removed.",
   "main": "index.js",
   "types": "index.d.ts",
   "sideEffects": false,
@@ -34,7 +34,7 @@
   "bugs": {
     "url": "https://github.com/apiverve/removepunctuation-api/issues"
   },
-  "homepage": "https://apiverve.com/marketplace/removepunctuation?utm_source=npm&utm_medium=homepage",
+  "homepage": "https://apiverve.com/marketplace/removepunctuation?utm_source=npm&utm_medium=referral&utm_content=homepage",
   "devDependencies": {
     "mocha": "^11.0.1",
     "chai": "^5.1.2",
