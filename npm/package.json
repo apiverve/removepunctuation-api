@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/removepunctuation",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "Remove Punctuation strips punctuation marks from any submitted text string and returns the cleaned text. Paid plans add the total count and a list of every punctuation character removed.",
   "main": "index.js",
   "types": "index.d.ts",
